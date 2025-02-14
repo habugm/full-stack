@@ -3,7 +3,9 @@ import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
-  const baseURL = "http://localhost:5000/"
+  // const baseURL = "http://localhost:5000/"
+  const baseURL = process.env.REACT_APP_API_URL;
+
   const [movies,setMovies]=useState([]);
 
   useEffect(() => {  
