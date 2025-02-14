@@ -12,11 +12,11 @@ app.use(cors())
 //Routes
 // app.use("/api/products",productRoute);
 
-app.get('/', function (req, res) {
+app.get('/api', function (req, res) {
   res.send('Hello World')
 })
 
-app.get('/movies', function (req, res) {
+app.get('/api/movies', function (req, res) {
   fs.readFile('movies.json', 'utf8', (err, data) => {
     if (err) {
       res.status(500).send('Error reading movies file');
